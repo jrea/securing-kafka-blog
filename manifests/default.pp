@@ -71,10 +71,10 @@ service{'firewall':
 }
 yumrepo{'confluent':
   ensure   => 'present',
-  descr    => 'Confluent repository for 3.0.x packages',
-  baseurl  => 'http://packages.confluent.io/rpm/3.0',
+  descr    => 'Confluent repository for 3.3.x packages',
+  baseurl  => 'http://packages.confluent.io/rpm/3.3',
   gpgcheck => 1,
-  gpgkey   => 'http://packages.confluent.io/rpm/3.0/archive.key',
+  gpgkey   => 'http://packages.confluent.io/rpm/3.3/archive.key',
 } ->
 package{$packages:
   ensure => 'installed'
